@@ -18,7 +18,7 @@ Returned value:  array of callback arguments.
 ## Example
 
 ```js
-import { asyncNotation } from 'async-notation';
+import asyncNotation from 'async-notation';
 
 //Prepare callback-styled function
 const timeoutFunction = (time, name, cb)=>{ setTimeout(()=>cb(name, 'done'), time); };

@@ -1,6 +1,6 @@
 {
   "name": "async-notation",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Async notation for callback-styled functions and methods.",
   "author": "Artem Varshavin",
   "license": "MIT",
@@ -12,7 +12,7 @@
   "main": "index.lib.js",
   "scripts": {
     "test": "cross-env NODE_ENV=development node --experimental-modules --experimental-json-modules node_modules/jest/bin/jest.js",
-    "build": "cross-env NODE_ENV=production babel src/index.mjs --plugins=transform-object-rest-spread,array-includes,starts-with-ends-with,transform-runtime --presets env --out-file index.lib.js",
+    "build": "cross-env NODE_ENV=production babel src/index.mjs --plugins=transform-object-rest-spread,array-includes,starts-with-ends-with,transform-runtime,add-module-exports --presets env --out-file index.lib.js",
     "build-test": "cross-env NODE_ENV=production jest"
   },
   "repository": {
@@ -35,6 +35,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-plugin-add-module-exports": "^1.0.2",
     "babel-plugin-array-includes": "^2.0.3",
     "babel-plugin-remove-import-export": "^1.1.0",
     "babel-plugin-starts-with-ends-with": "^1.0.2",

@@ -1,4 +1,4 @@
-const { asyncNotation } = process.env.NODE_ENV === 'development' ? require('../src/index.mjs') : require('../index.lib.js');
+const asyncNotation = process.env.NODE_ENV === 'development' ? require('../src/index.mjs').default : require('../index.lib.js');
 
 const timeoutFunction = (time, name, cb)=>{
 	setTimeout(()=>cb(name, 'done'), time);

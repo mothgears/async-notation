@@ -1,4 +1,4 @@
-export const asyncNotation = async (target, ...props) => {
+export default async (target, ...props) => {
 	return new Promise((resolve, reject)=>{
 		const cb = (...result) => resolve(result);
 		try {
@@ -12,5 +12,5 @@ export const asyncNotation = async (target, ...props) => {
 		} catch (err) {
 			reject(err);
 		}
-	});
+	})
 };

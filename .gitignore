@@ -9,4 +9,4 @@ node_modules/
 yarn-error.log
 
 /bin
-index.lib.js
+/index.lib.js
