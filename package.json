@@ -1,6 +1,6 @@
 {
   "name": "async-notation",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Async notation for callback-styled functions and methods.",
   "author": "Artem Varshavin",
   "license": "MIT",
@@ -9,10 +9,10 @@
     "await",
     "callback"
   ],
-  "main": "index.lib.js",
+  "main": "async-notation.lib.js",
   "scripts": {
     "test": "cross-env NODE_ENV=development node --experimental-modules --experimental-json-modules node_modules/jest/bin/jest.js",
-    "build": "cross-env NODE_ENV=production babel src/index.mjs --plugins=transform-object-rest-spread,array-includes,starts-with-ends-with,transform-runtime,add-module-exports --presets env --out-file index.lib.js",
+    "build": "cross-env NODE_ENV=production babel src/index.mjs --out-file async-notation.lib.js",
     "build-test": "cross-env NODE_ENV=production jest"
   },
   "repository": {
@@ -33,20 +33,18 @@
     }
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.6",
     "babel-plugin-add-module-exports": "^1.0.2",
-    "babel-plugin-array-includes": "^2.0.3",
-    "babel-plugin-remove-import-export": "^1.1.0",
-    "babel-plugin-starts-with-ends-with": "^1.0.2",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.7.0",
-    "cross-env": "^5.2.0",
+    "cross-env": "^6.0.3",
     "jest": "^24.9.0",
     "jest-esm-transformer": "^1.0.0"
   },
   "dependencies": {
-    "babel-runtime": "^6.26.0"
+    "@babel/runtime": "^7.7.6",
+    "core-js": "^3.5.0",
+    "regenerator-runtime": "^0.13.3"
   }
 }

@@ -3,5 +3,6 @@
 .npmignore
 /tests
 /src
+.babelrc
 yarn-error.log
 yarn.lock
